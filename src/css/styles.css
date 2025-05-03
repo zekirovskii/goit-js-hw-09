@@ -1,37 +1,61 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  background-color: #ffffff;
+  /* Mor arka plan */
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+/* Ana buton yönlendirme kutusu */
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border: 2px solid #ffffff44;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
 
-.gallery-container{
-    font-family: Arial, sans-serif;
-    background-color: #F0F0F0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+.main-container a {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #c471ed, #f64f59);
+  /* Pembe-mor geçiş */
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s;
+  text-align: center;
+  width: 100%;
+}
+
+.main-container a:hover {
+  background: linear-gradient(135deg, #d76d77, #ffaf7b);
+  /* Soft coral-pink hover */
+  transform: scale(1.05);
+}
+
+/* Galeri arka planı */
+.gallery-container {
+  font-family: Arial, sans-serif;
+  background-color: #f8f1fb;
+  /* Açık lila */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 3 sütunlu düzen */
   gap: 20px;
   padding: 20px;
   max-width: 1200px;
@@ -62,14 +86,17 @@
   border-bottom: 3px solid #ddd;
 }
 
+/* Feedback form */
 .feedback-form {
   max-width: 500px;
-  margin: auto;
+  margin: 200px auto;
   padding: 20px 30px;
   background: linear-gradient(135deg, #e0bbff, #f3e5f5);
+  /* Mor-pembe degrade */
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 label {
   display: block;
   margin-bottom: 15px;
@@ -86,19 +113,23 @@ textarea {
   box-sizing: border-box;
 }
 
+/* Gönder butonu */
 button {
   display: block;
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  background-color: #e34234;
+  background-color: #ff6f61;
+  /* Coral ton */
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 button:hover {
-  background-color: #d4af37;
+  background-color: #d64b3d;
+  /* Hover daha koyu coral */
+  transform: scale(1.03);
 }
